@@ -3,13 +3,13 @@ using WebPostgreSQL.Models;
 
 namespace WebPostgreSQL.Context
 {
-    public class Contexto : DbContext
+    public partial class Contexto : DbContext
     {
+
         public Contexto(DbContextOptions<Contexto> options) : base(options)
         {
-            this.Database.EnsureCreated();
         }
 
-        DbSet<Produto> Produtos { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
     }
 }
